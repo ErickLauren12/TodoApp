@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/activity_main.xml" value="0.21875" />
-        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_create_todo.xml" value="0.176" />
-        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_todo_list.xml" value="0.14427083333333332" />
+        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_create_todo.xml" value="0.264" />
+        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_todo_list.xml" value="0.4" />
         <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/layout_todo_item.xml" value="0.264" />
       </map>
     </option>

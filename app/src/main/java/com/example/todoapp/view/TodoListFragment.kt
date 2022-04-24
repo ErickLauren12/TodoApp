@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_todo_list.*
 class TodoListFragment : Fragment() {
     private lateinit var viewModel: TodoListViewModel
     private  val todoListAdapter = TodoListAdapter(arrayListOf()){
-        viewModel.clearTask(it)
+        viewModel.doneTask(it)
     }
 
     override fun onCreateView(
