@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <CheckBox
-        android:id="@+id/checkTask"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="todo"
+            type="com.example.todoapp.model.Todo" />
+        <variable
+            name="checkboxListener"
+            type="com.example.todoapp.view.TodoCheckedChangeListener" />
+        <variable
+            name="editListener"
+            type="com.example.todoapp.view.TodoEditClickListener" />
+    </data>
 
-    <ImageButton
-        android:id="@+id/buttonEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/checkTask"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_edit_24" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{todo.title}"
+            android:onCheckedChanged="@{(cb, isChecked) -> checkboxListener.onCheckChanged(cb, isChecked, todo)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="@color/white"
+            android:tag="@{todo.uuid}"
+            android:onClick="@{editListener::onTodoEditClick}"
+            app:layout_constraintEnd_toEndOf="@+id/checkTask"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

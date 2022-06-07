@@ -10,6 +10,10 @@ plugins {
 android {
     compileSdk 31
 
+    dataBinding{
+        enabled true
+    }
+
     defaultConfig {
         applicationId "com.example.todoapp"
         minSdk 21
@@ -33,6 +37,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+
 }
 
 dependencies {

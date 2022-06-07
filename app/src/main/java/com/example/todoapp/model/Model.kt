@@ -13,7 +13,7 @@ data class Todo(
     @ColumnInfo(name = "priority")
     var priority: Int,
     @ColumnInfo(name = "is_done")
-    var done: Int)
+    var done: Int) //Megunkana int karena tidak support bollean
 {
     @PrimaryKey(autoGenerate = true)
     var uuid: Int = 0

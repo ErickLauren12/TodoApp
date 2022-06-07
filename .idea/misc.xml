@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.154" />
         <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/activity_main.xml" value="0.21875" />
         <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_create_todo.xml" value="0.264" />
-        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_todo_list.xml" value="0.4" />
+        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_edit_todo.xml" value="0.264" />
+        <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/fragment_todo_list.xml" value="0.176" />
         <entry key="..\:/AdvanceNativeProject/TodoApp/app/src/main/res/layout/layout_todo_item.xml" value="0.264" />
       </map>
     </option>

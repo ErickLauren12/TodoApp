@@ -19,6 +19,9 @@ interface TodoDao {
     @Query("UPDATE todo SET is_done = :done WHERE uuid = :id")
     suspend fun doneTask(id: Int, done: Int)
 
+    @Update
+    suspend fun update(todo: Todo)
+
     @Delete
     suspend fun deleteTodo(todo: Todo)
 }
